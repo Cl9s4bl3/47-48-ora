@@ -21,8 +21,8 @@ body, html {
 
 .item {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-end; /* Ensure the content stays at the bottom */
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,8 @@ body, html {
     color: white;
     background-size: cover;
     background-position: center;
-    position: relative; /* To contain the absolutely positioned content */
+    position: relative;
+    cursor: pointer;
 }
 
 .koltseg {
@@ -50,11 +51,12 @@ body, html {
 
 .item-content {
     position: absolute;
-    bottom: 20px; /* Pushes the content to the bottom */
+    bottom: 20px;
     left: 0;
     right: 0;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn {
@@ -88,6 +90,7 @@ body, html {
         width: 80%;
         margin-left: 0;
         margin-bottom: 20px;
+        cursor: pointer;
     }
 
     .btn {
