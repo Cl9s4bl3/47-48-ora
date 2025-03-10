@@ -11,6 +11,9 @@
     h1{
         text-align: center;
     }
+    #keplet{
+        text-align:center;
+    }
 </style>
     <h1>Kockázatelemzés</h1>
     <p>
@@ -43,9 +46,86 @@ cél: Megadjuk a különböző kockázati tényezők számát
         <li>
             A számítási eredmények grafikus ábrázolása
         </li>
-        <p>
-            A legvalószínűbb értékek meghatározáshoz a Delphi módszer alkalmazható.
-        </p>
     </ol>
+    <p>
+        A legvalószínűbb értékek meghatározáshoz a Delphi módszer alkalmazható.
+    </p>
+    <h2>Valószínűségi elemzés</h2>
+    <p>A valószínűségi elemzés az egyes kockázati tényezők valószínűségi eloszlásának felhasználásával veszi tekintetbe a kockázati források együttes hatását.
+    </p>
+    <p>Képlete:</p><p id="keplet">valószínűség x hatás = várható érték</p>
+<p>Például: </p><br>
+<p>Az 50 000 forintos berendezés elromlásának valószínűsége 10%, a 85 000 forintos berendezésnek pedig 5%.<br>
+    Így a várható érték: (0,10 x 50 000) + (0,05 x 85 000) = 9250 (Ft)</p>
+    <h3>Táblázat a példára:</h3>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 20px auto; /* This centers the table */
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Befektetés értéke (Ft)</th>
+        <th>Elromlás valószínűsége</th>
+        <th>Várható veszteség (Ft)</th>
+    </tr>
+    <tr>
+        <td>50 000</td>
+        <td>10% (0,10)</td>
+        <td>0,10 × 50 000 = 5 000</td>
+    </tr>
+    <tr>
+        <td>85 000</td>
+        <td>5% (0,05)</td>
+        <td>0,05 × 85 000 = 4 250</td>
+    </tr>
+    <tr>
+        <th colspan="2">Összes várható veszteség</th>
+        <th>5 000 + 4 250 = 9 250 Ft</th>
+    </tr>
+</table>
+<p>Ez alapján válaszstratégiákat lehet kitervelni.</p>
+<h2>Válaszstratégiák:</h2>
+<ul>
+    <li>
+        Kockázat elfogadása
+    </li>
+    <li>
+        Kockázat elkerülése
+    </li>
+    <li>
+        Kockázat szabályozása
+    </li>
+    <li>
+        Kockázatok átruházása
+    </li>
+    <li>
+        Kockázatok csökkentése
+    </li>
+</ul>
+<p>
+    A kockázatkezelés kettős célt valósít meg:
+    <ul>
+        <li>
+            Lehetővé teszi a projekt hatékonyabb megvalósítását.
+        </li>
+        <li>
+            Jelentősen hozzájárul a projektváltozatok reális gazdasági-pénzügyi értékeléséhez.
+        </li>
+    </ul>
+</p>
 </body>
 </html>
