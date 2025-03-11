@@ -3,9 +3,10 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
+    background-color: rgb(19, 19, 19);
 }
 
-.container {
+.kontener {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +29,8 @@ body, html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
     height: 80vh;
+}
+
 h1{
     text-align: center;
     margin-left: 20px;
@@ -39,16 +42,29 @@ h1{
 }
 
 .koltseg {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/koltseg.webp);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/money.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
 }
 
 .kockazat {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/OIP.jfif);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/risk.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 20px;
 }
 
 .egyensuly {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/R.jfif);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/balance.jfif);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+
 
 .item-content {
     position: absolute;
@@ -60,7 +76,7 @@ h1{
     cursor: pointer;
 }
 
-.btn {
+.button-btn {
     padding: 10px 20px;
     margin-top: 20px;
     background-color: #007bff;
@@ -71,7 +87,7 @@ h1{
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.button-btn:hover {
     background-color: #0056b3;
 }
 
@@ -83,19 +99,64 @@ h1{
         width: 90%;
     }
 
-    .koltseg{
-        margin-top: 1600px;
+    .koltseg, .kockazat, .egyensuly {
+        background-size: cover;  /* Make sure the images cover the entire element */
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;  /* Make sure they occupy full width */
+        height: 250px;  /* Set a reasonable height for mobile, you can adjust this */
+    }
+
+    .koltseg {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/money.png);
+    }
+
+    .kockazat {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/risk.png);
+    }
+
+    .egyensuly {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/balance.jfif);
     }
 
     .item {
-        width: 80%;
+        width: 90%;  /* Make the items take up more space on mobile */
         margin-left: 0;
         margin-bottom: 20px;
         cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: auto;  /* Let the height adjust based on content */
     }
 
-    .btn {
+    .item-content {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        text-align: center;
+        color: white;  /* Ensure text is visible on top of background */
+        font-size: 16px;  /* Adjust text size for readability */
+        font-weight: bold;
+    }
+
+    .button-btn {
         width: 100%;
-        padding: 12px;
+        padding: 12px 20px;
+        margin-top: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .button-btn:hover {
+        background-color: #0056b3;
     }
 }
+
+
+/* Mobile view not fixed */

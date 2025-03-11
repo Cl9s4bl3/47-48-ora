@@ -1,131 +1,192 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/style.css" rel="stylesheet">
-    <title>Kockázatelemzés</title>
-</head>
-<body>
-<style>
-    h1{
-        text-align: center;
-    }
-    #keplet{
-        text-align:center;
-    }
-</style>
-    <h1>Kockázatelemzés</h1>
-    <p>
-        A projektben a bizonytalanságot kockázatnak tekintjük, mely lehet veszteség és nyereség is. A kockázat bekövetkezésének a valószínűsége kiszámolható. Ahogy a bizonytalanság lényegi velejárója a projektek megvalósításának, ugyanúgy a kockázatok is végigkísérik ezt a folyamatot. 
-    </p>
-    <h2>A kockázatelemzés tevékenységcsoportjai</h2>
-    <ol>
-        <li>
-            Kockázati források csoportjai
-        </li>
-        <li>
-            Kockázati változók hatásának elemzése:<br>
-cél: Megadjuk a különböző kockázati tényezők számát 
-        </li>
-        <li>
-            Kockázatelemzés
-        </li>
-    </ol>
-    <h2>Érzékenységi vizsgálat</h2>
-    <p>
-        Vizsgálja, hogy a kockázati tényezők egyéni változásai milyen mértékben befolyásolják az elemzés alapjául szolgáló függő változót. Az érzékenységi vizsgálat figyelmen kívül hagyja a kockázati változók közötti esetleges összefüggéseket, a kockázati változók értékeinek előfordulási valószínűségeit. 
-    </p>
-    <ol>
-        <li>
-            Az egyes kockázati változók legvalószínűbb értékváltozásainak a meghatározása
-        </li>
-        <li>
-            A változók különböző értékeinek kiszámítása, és számítások segítségével a függő változók halmazainak a kialakítása
-        </li>
-        <li>
-            A számítási eredmények grafikus ábrázolása
-        </li>
-    </ol>
-    <p>
-        A legvalószínűbb értékek meghatározáshoz a Delphi módszer alkalmazható.
-    </p>
-    <h2>Valószínűségi elemzés</h2>
-    <p>A valószínűségi elemzés az egyes kockázati tényezők valószínűségi eloszlásának felhasználásával veszi tekintetbe a kockázati források együttes hatását.
-    </p>
-    <p>Képlete:</p><p id="keplet">valószínűség x hatás = várható érték</p>
-<p>Például: </p><br>
-<p>Az 50 000 forintos berendezés elromlásának valószínűsége 10%, a 85 000 forintos berendezésnek pedig 5%.<br>
-    Így a várható érték: (0,10 x 50 000) + (0,05 x 85 000) = 9250 (Ft)</p>
-    <h3>Táblázat a példára:</h3>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <title>Kockázatelemzés</title>
+    </head>
     <style>
+        h1{
+            text-align: center;
+        }
+
+        #keplet{
+            text-align:center;
+        }
+
         table {
             width: 60%;
             border-collapse: collapse;
             text-align: center;
-            margin: 20px auto; /* This centers the table */
+            margin: 20px auto;
         }
+
         th, td {
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 10px;
         }
+
         th {
-            background-color: lightgray;
+            background-color: rgb(19, 19, 19);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgb(19, 19, 19);
+            color: rgb(226, 223, 223);
+        }
+
+        h2 {
+            margin-top: 60px;
+        }
+
+        .dropdown-item:active {
+            background-color: rgb(52, 58, 64);
+            color: white;
         }
     </style>
-</head>
-<body>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Főoldal</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tartalom
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="koltseg.html">Költségvetés</a></li>
+                                <li><a class="dropdown-item" href="kiegyensuly.html">Kiegyensúlyozás</a></li>
+                                <li><a class="dropdown-item" href="kockazat.html">Kockázatelemzés</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cpm-mpm.html">CPM-MPM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="forrasok.html">Források</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bemutatkozas.html">Bemutatkozás</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dokumentacio.html">Dokumentáció</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="mt-5">Kockázatelemzés</h1>
+            <p class="mt-5" style="text-align: center;">
+                A projektben a bizonytalanságot kockázatnak tekintjük, mely lehet veszteség és nyereség is. A kockázat bekövetkezésének a valószínűsége kiszámolható. Ahogy a bizonytalanság lényegi velejárója a projektek megvalósításának, ugyanúgy a kockázatok is végigkísérik ezt a folyamatot. 
+            </p>
+            <h2>A kockázatelemzés tevékenységcsoportjai</h2>
+            <ol>
+                <li>
+                    Kockázati források csoportjai
+                </li>
+                <li>
+                    Kockázati változók hatásának elemzése<br>
+                    Cél: Megadjuk a különböző kockázati tényezők számát 
+                </li>
+                <li>
+                    Kockázatelemzés
+                </li>
+            </ol>
+            <h2>Érzékenységi vizsgálat</h2>
+            <p style="text-align: center;">
+                Vizsgálja, hogy a kockázati tényezők egyéni változásai milyen mértékben befolyásolják az elemzés alapjául szolgáló függő változót. Az érzékenységi vizsgálat figyelmen kívül hagyja a kockázati változók közötti esetleges összefüggéseket, a kockázati változók értékeinek előfordulási valószínűségeit. 
+            </p>
+            <ol>
+                <li>
+                    Az egyes kockázati változók legvalószínűbb értékváltozásainak a meghatározása
+                </li>
+                <li>
+                    A változók különböző értékeinek kiszámítása, és számítások segítségével a függő változók halmazainak a kialakítása
+                </li>
+                <li>
+                    A számítási eredmények grafikus ábrázolása
+                </li>
+            </ol>
+            <p>
+                A legvalószínűbb értékek meghatározáshoz a Delphi módszer alkalmazható.
+            </p>
+            <h2>Valószínűségi elemzés</h2>
+            <p style="text-align: center;">
+                A valószínűségi elemzés az egyes kockázati tényezők valószínűségi eloszlásának felhasználásával veszi tekintetbe a kockázati források együttes hatását.
+            </p>
+            <p>Képlete:</p><p id="keplet">valószínűség x hatás = várható érték</p>
+            <p>Például: </p><br>
+            <p>
+                Az 50 000 forintos berendezés elromlásának valószínűsége 10%, a 85 000 forintos berendezésnek pedig 5%.<br>
+                Így a várható érték: (0,10 x 50 000) + (0,05 x 85 000) = 9250 (Ft)
+            </p>
+            <h2>Táblázat a példára</h2>
+            <table>
+                <tr>
+                    <th>Befektetés értéke (Ft)</th>
+                    <th>Elromlás valószínűsége</th>
+                    <th>Várható veszteség (Ft)</th>
+                </tr>
+                <tr>
+                    <td>50 000</td>
+                    <td>10% (0,10)</td>
+                    <td>0,10 × 50 000 = 5 000</td>
+                </tr>
+                <tr>
+                    <td>85 000</td>
+                    <td>5% (0,05)</td>
+                    <td>0,05 × 85 000 = 4 250</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Összes várható veszteség</th>
+                    <th>5 000 + 4 250 = 9 250 Ft</th>
+                </tr>
+            </table>
+            <p>Ez alapján válaszstratégiákat lehet kitervelni.</p>
 
-<table>
-    <tr>
-        <th>Befektetés értéke (Ft)</th>
-        <th>Elromlás valószínűsége</th>
-        <th>Várható veszteség (Ft)</th>
-    </tr>
-    <tr>
-        <td>50 000</td>
-        <td>10% (0,10)</td>
-        <td>0,10 × 50 000 = 5 000</td>
-    </tr>
-    <tr>
-        <td>85 000</td>
-        <td>5% (0,05)</td>
-        <td>0,05 × 85 000 = 4 250</td>
-    </tr>
-    <tr>
-        <th colspan="2">Összes várható veszteség</th>
-        <th>5 000 + 4 250 = 9 250 Ft</th>
-    </tr>
-</table>
-<p>Ez alapján válaszstratégiákat lehet kitervelni.</p>
-<h2>Válaszstratégiák:</h2>
-<ul>
-    <li>
-        Kockázat elfogadása
-    </li>
-    <li>
-        Kockázat elkerülése
-    </li>
-    <li>
-        Kockázat szabályozása
-    </li>
-    <li>
-        Kockázatok átruházása
-    </li>
-    <li>
-        Kockázatok csökkentése
-    </li>
-</ul>
-<p>
-    A kockázatkezelés kettős célt valósít meg:
-    <ul>
-        <li>
-            Lehetővé teszi a projekt hatékonyabb megvalósítását.
-        </li>
-        <li>
-            Jelentősen hozzájárul a projektváltozatok reális gazdasági-pénzügyi értékeléséhez.
-        </li>
-    </ul>
-</p>
-</body>
+            <h2>Válaszstratégiák</h2>
+            <ul>
+                <li>
+                    Kockázat elfogadása
+                </li>
+                <li>
+                    Kockázat elkerülése
+                </li>
+                <li>
+                    Kockázat szabályozása
+                </li>
+                <li>
+                    Kockázatok átruházása
+                </li>
+                <li>
+                    Kockázatok csökkentése
+                </li>
+            </ul>
+        
+            <p>A kockázatkezelés kettős célt valósít meg:</p>
+            <ul>
+                <li>
+                    Lehetővé teszi a projekt hatékonyabb megvalósítását.
+                </li>
+                <li>
+                    Jelentősen hozzájárul a projektváltozatok reális gazdasági-pénzügyi értékeléséhez.
+                </li>
+            </ul>
+            
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <body>
 </html>
