@@ -100,14 +100,15 @@ h1{
     }
 
     .koltseg, .kockazat, .egyensuly {
-        background-size: cover;  /* Make sure the images cover the entire element */
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;  /* Make sure they occupy full width */
-        height: 250px;  /* Set a reasonable height for mobile, you can adjust this */
+        width: 100%;
+        height: 250px;
     }
 
     .koltseg {
+        margin-top: 1000px !important;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url(../img/money.png);
     }
 
@@ -120,13 +121,15 @@ h1{
     }
 
     .item {
-        width: 90%;  /* Make the items take up more space on mobile */
+        width: 70%;
         margin-left: 0;
         margin-bottom: 20px;
         cursor: pointer;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        height: auto;  /* Let the height adjust based on content */
+        height: 500px;
+        margin-top: 30px;
+        background-size: contain;
     }
 
     .item-content {
@@ -136,8 +139,8 @@ h1{
         right: 0;
         padding: 10px;
         text-align: center;
-        color: white;  /* Ensure text is visible on top of background */
-        font-size: 16px;  /* Adjust text size for readability */
+        color: white;
+        font-size: 16px;
         font-weight: bold;
     }
 
@@ -157,6 +160,3 @@ h1{
         background-color: #0056b3;
     }
 }
-
-
-/* Mobile view not fixed */
