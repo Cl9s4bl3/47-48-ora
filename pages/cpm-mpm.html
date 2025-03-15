@@ -19,6 +19,14 @@
             background-color: rgb(52, 58, 64);
             color: white;
         }
+        .dropdown-menu {
+            background-color: rgb(52, 58, 64);
+            color: white;
+        }
+
+        .container{
+            padding-bottom: 20px;
+        }
     </style>
 </head>
 <body bgcolor="black">
@@ -59,8 +67,96 @@
             </div>
         </div>
     </nav>
-    <div class="page-header">
-        <h1 style="font-weight: bold;" align="center" class="mt-5">CPM-MPM</h1>
+    <div class="container">
+        <h1 style="font-weight: bold;" align="center" class="mt-5">CPM</h1>
+        <h2>A hálótervezés előnyei</h2>
+        <p>A bonyolult, nehezen áttekinthető folyamatokat, folyamatrendszereket irányítani, szervezni, áttekinteni és ellenőrizni, a hálódiagramos módszerek alkalmazása nélkül, ma már szinte elképzelhetetlen.</p>
+        <h2>A CPM háló elemei (1. rész)</h2>
+        <p>
+            <b>Tevékenység:</b>
+            <ul>
+                <li>Egy-egy részfeladatot a hálóban tevékenységnek nevezünk</li>
+                <li>Emiatt szokták a CPM-hálót tevékenységre orientált hálótervnek is nevezni</li>
+                <li>Mindig van időtartama (10 nap, 2 hét, 9 hónap)</li>
+                <li>A nyíl hossza nem arányos a tevékenység idejével</li>
+                <li>Erőforrásigénye van</li>
+                <li>Egyik eseménytől a másikig tart</li>
+                <li><b>Jele:</b> Folytonos nyíl</li>
+            </ul>
+        </p>
+        <h2>A CPM háló elemei (2. rész)</h2>
+        <p>
+            <b>Esemény:</b>
+            <ul>
+                <li>Azokat a pontokat, amelyek a tevékenység kezdő és befejező határát jelzik a hálóban, eseménynek nevezzük</li>
+                <li>Mindig időpontot jelöl (7. nap, 12. hét, 2. hónap)</li>
+                <li>Erőforrásigénye nincs</li>
+                <li>A tevékenység kezdő vagy befejező időpontját jelzi</li>
+                <li><b>Jele:</b> kör, négyzet (síkidom)</li>
+            </ul>
+        </p>
+        <h2>Látszattevékenység</h2>
+        <p>
+            <ul>
+                <li>Ez nem tevékenység, nem igényel időt, nem igényel erőforrást, csupán a logikai összefüggést, a logikai kapcsolatot fejezi ki</li>
+                <li><b>Jele:</b> Szaggatott nyíl</li>
+            </ul>
+        </p>
+        <h2>Szerkesztési szabályok és a logikai háló elkészítése</h2>
+        <p>
+            <ul>
+                <li>Két eseményt csak egy tevékenység köthet össze</li>
+                <li>Amennyiben egy esemény bekövetkezésével 2 tevékenység indulhat el, de mindkettőnek befejeződése szükséges ahhoz, hogy egy harmadik tevékenység elkezdődhessen, akkor egy látszattevékenységet iktatunk közbe</li>
+                <li>A háló hurokmentes legyen</li>
+                <li>Egy eseményből több tevékenység is kiindulhat, illetve egy eseménybe több tevékenység is érkezhet</li>
+                <li>Az események számozása növekvő legyen</li>
+                <li>A háló időben összefüggő és irányfolyamatos legyen</li>
+                <li>Egy kezdő és egy végpont lehet</li>
+            </ul>
+        </p>
+        <h1 style="font-weight: bold;" align="center" class="mt-5">MPM</h1>
+        <h2>Miért fontos a hálótervezés?</h2>
+        <p>A projektmenedzsment során elengedhetetlen a feladatok és határidők pontos nyomon követése. A hálótervezés segít az erőforrások optimális elosztásában, a feladatok logikai sorrendjének meghatározásában és a projekt hatékony végrehajtásában.</p>
+        <h2>Az MPM Háló Elemei (1. rész)</h2>
+        <p>
+            <b>Tevékenység:</b>
+            <ul>
+                <li>A tevékenységek azok a feladatok, amelyeket a projekt során végre kell hajtani.</li>
+                <li>Az MPM hálóban minden egyes tevékenység egy-egy csomópontként jelenik meg, és az élek mutatják a közöttük lévő kapcsolatokat.</li>
+                <li>A tevékenységeknek meghatározott időtartamuk van (pl. 10 nap, 2 hét, 3 hónap).</li>
+                <li>A tevékenységeknek erőforrás-igényeik is lehetnek, tehát emberi munkaerőt vagy eszközöket igényelhetnek.</li>
+                <li>Minden tevékenység kapcsolatban áll egy vagy több eseménnyel, melyek kezdeti és befejező pontokat jelölnek.</li>
+            </ul>
+        </p>
+        <h2>Az MPM Háló Elemei (2. rész)</h2>
+        <p>
+            <b>Esemény:</b>
+            <ul>
+                <li>Az események a projekt különböző mérföldköveit vagy határpontjait jelölik.</li>
+                <li>Ezek nem tartalmaznak erőforrást, csupán időpontokat (például: 7. nap, 12. hét, 2. hónap).</li>
+                <li>A tevékenységek kezdetét és végét ezek az események jelentik.</li>
+                <li>Az események segítenek a projekt ütemezésének nyomon követésében, és meghatározzák, mikor kell a következő tevékenységnek elkezdődnie.</li>
+            </ul>
+        </p>
+        <h2>Mi a Látszattevékenység?</h2>
+        <p>
+            <ul>
+                <li>A látszattevékenység nem valódi tevékenység, hanem kizárólag a tevékenységek közötti logikai kapcsolatot jelzi.</li>
+                <li>Ez nem igényel időt vagy erőforrást, de fontos a projekt átláthatóságának biztosítása érdekében.</li>
+            </ul>
+        </p>
+        <h2>Szerkesztési Szabályok és a Logikai Háló Felépítése</h2>
+        <p>
+            <ul>
+                <li>Két eseményt egyetlen tevékenység köthet össze, tehát mindig egyértelmű a sorrend.</li>
+                <li>Ha két tevékenység azonos eseményhez kapcsolódik, és mindkettőnek befejeződnie kell ahhoz, hogy egy harmadik elkezdődhessen, akkor látszattevékenységet kell alkalmazni.</li>
+                <li>A hálóban nem lehet hurok, vagyis nem lehet olyan kör, amelyben a tevékenységek újra és újra ugyanabba az eseménybe vezetnek.</li>
+                <li>Egy esemény több tevékenység kezdetét is jelentheti, és több tevékenység is érkezhet ugyanarra az eseményre.</li>
+                <li>A projekt eseményeit növekvő számozás szerint kell rendezni.</li>
+                <li>A projekt idővonalának követése érdekében a hálónak összefüggőnek és irányított irányban kell fejlődnie.</li>
+                <li>A projektnek egyetlen kezdő és befejező pontja van.</li>
+            </ul>
+        </p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
