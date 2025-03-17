@@ -28,6 +28,14 @@
         .container{
             padding-bottom: 20px;
         }
+
+        h4{
+            margin-top: 20px;
+        }
+
+        h5{
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -68,8 +76,32 @@
             </div>
         </div>
     </nav>
-    <div class="page-header">
-        <h1 style="font-weight: bold;" align="center" class="mt-5">Költségbecslés</h1>
+    <div class="container mt-4">
+            <h1 align="center" class="mt-5">Becsélési módszerek pontosság szerint</h1><br>
+            <p><strong>Hasra ütés alapú becslés:</strong> Nagy hibahatár, első lépésként használatos.</p>
+            <p><strong>Durva nagyságrendi becslés (ROM):</strong> Korábbi projektek adataira alapozott, nagy szórással rendelkező becslés.</p>
+            <p><strong>Részletes becslés:</strong> "Lentről felfelé" megközelítés, amely pontosabb erőforrás-tervezést biztosít.</p>
+            
+            <h4>Legelterjedtebb becslési technikák</h4>
+            <h5>Szakaszos becslés:</h5>
+            <ul>
+                <li>Projektszakaszonként történő becslés.</li>
+                <li>Kétlépcsős folyamat: nagyságrendi becslés az egész projektre, majd részletes becslés az adott szakaszra.</li>
+                <li>Előnyök: Rugalmasság, kockázatcsökkentés, pontosabb előrejelzés.</li>
+                <li>Hátrányok: Váratlan költségek és felelősségi problémák.</li>
+            </ul>
+            
+            <h5>Arányos becslés:</h5>
+            <p>"Fentről lefelé" megközelítés, az egész projektből kiindulva.</p>
+            <p>Gyakran kombinálják a szakaszos becsléssel a pontosság növelése érdekében.</p>
+            
+            <h5>Parametrikus becslés:</h5>
+            <p>A munkavégzés egységeinek és paramétereknek kombinációjára épít.</p>
+            <p><strong>Példa:</strong> Egy ember napi termelékenysége alapján számított költség és időigény.</p>
+            
+            <h5>Lentről felfelé becslés:</h5>
+            <p>Feladatonként történő részletes becslés.</p>
+            <p>A legpontosabb módszer, de a projekt részleteinek alapos ismeretét feltételezi.</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
